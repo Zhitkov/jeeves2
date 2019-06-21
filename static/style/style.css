@@ -1,0 +1,4 @@
+.v-text-field--outline>.v-input__control>.v-input__slot {
+    background: white!important;
+    border-radius: 4px;
+}
