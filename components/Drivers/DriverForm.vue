@@ -27,7 +27,7 @@
 	</v-flex>
 	 <v-flex  md2 xs10 style="display: flex; justify-content: center;">
 
-	  	<v-menu id="app2" nudge-bottom="30" nudge-left="100" :close-on-click="menuOpen2" :close-on-content-click="menuOpen2" bottom right>
+	  	<v-menu id="app2" nudge-bottom="30" nudge-left="-30" :close-on-click="menuOpen2" :close-on-content-click="menuOpen2" bottom right>
 	      		<div @click="menuOpen2 = !menuOpen2" slot="activator" class="driver-about">
 	      			<p class="linkText">Требования к водителям</p> 
 		  			<v-icon>expand_more</v-icon>
@@ -38,15 +38,14 @@
 	      		<v-card-tile-title style="">
 	      			<ul class="forDrivers">
 	      				<v-icon @click="menuOpen2 = !menuOpen2" class="clear">clear</v-icon>
-	      				<b class="about">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,</b>
-	      				<ol>
-	      					<li>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.</li>
-	      					<li>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.</li>
-	      					<li>Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum.</li>
-	      					<li>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</li>
-	      					<li> Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.</li>
-	      					<li>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.</li>
-	      				</ol>
+	      				<!-- <b class="about">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,</b> -->
+	      				<ul>
+	      					<li>Стаж вождения от 5 лет</li>
+	      					<li>Гражданство РФ</li>
+	      					<li>Классический костюм и галстук</li>
+	      					<li>Знание норм этикета</li>
+	      					<li>Знание иностранного языка</li>
+	      				</ul>
 	      			</ul>
 	      		</v-card-tile-title>
 	      	</v-card-tile>
@@ -211,7 +210,7 @@
 		height: 40px !important;
     }
 .phone-form2 .v-input .v-input__control .v-input__slot {
-    border: 0.3px solid #1D1919 !important;
+    border: 0.6px solid #1D1919 !important;
 }
 .driver-select .v-input__control .v-input__slot .v-select__slot .v-label.theme--light{
 	color: black !important;
@@ -291,11 +290,11 @@
 	.about {
 		color: #2196f3 !important;
 	}
-	.forDrivers > ol > li {
-		font-weight: 300;
-		font-size: 14px;
+	.forDrivers > ul > li {
+		font-weight: 400;
+		font-size: 18px;
 		line-height: 16px;
-		margin: 10px 0;
+		margin: 15px 0;
 	}
 
     div.tooltip-arrow-up {

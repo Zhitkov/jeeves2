@@ -15,7 +15,7 @@
       <img class="phone" :src="phone"></img>
   </v-flex>
     </v-flex>
-    <v-flex mr-4 my-2 style="display: flex; flex-direction: row; padding-bottom: 155px;" xs12>
+    <v-flex mr-4 my-2 class="assistent-text" xs12>
     <v-flex px-1 style="display: flex; flex-direction: column; justify-content: center;" class="text2" v-for="text2 in texts2" md5 xs10>
 			<h2 class="title">
 				{{ text2.title }}
@@ -75,6 +75,8 @@
 </script>
 
 <style lang="stylus" scoped>
+.assistent-text 
+  display: flex; flex-direction: row; justify-content: center;
 .static
   flex-direction: column;
 .phone 
@@ -138,8 +140,14 @@ div[data-v-00bd8e1c].container
 	  margin-bottom: 75px;
 	  margin-top: 55px;
 }
+.assistent-text {
+    flex-direction: column !imporatnt;
+}
 .phone {
   display: none;
+}
+.big {
+      font-size: 31px;
 }
   .First-text{
     font-size: 20px; 

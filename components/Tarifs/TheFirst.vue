@@ -4,7 +4,7 @@
       
       <v-img class="parallax-screen change" style="align-self: flex-end;" dark :lazy-src="bg" cover :src="bg">
         <div style="display: flex; justify-content: flex-start;" class="static">
-        <v-flex md3>
+        <v-flex md3 xs2>
           <v-img style="padding-bottom: 69px;" :src="logo" contain></v-img>
         </v-flex>
         </div>

@@ -38,7 +38,6 @@
         <v-list dark>
           <v-list-tile
           v-for="lang in langs"
-          :key="i"
           @click=""
           >
           <v-list-tile-title ripple class="text-capitalize">{{ lang.name }}</v-list-tile-title>
@@ -83,7 +82,6 @@
       <v-list dark>
         <v-list-tile
         v-for="nav in navLinks"
-        :key="i"
         :to="nav.link"
         @click=""
         >

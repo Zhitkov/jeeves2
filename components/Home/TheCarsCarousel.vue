@@ -1,16 +1,21 @@
 <template>
 	<v-layout row wrap>
-      <v-flex v-for="(car,i) in cars"
+      <v-flex class="hidden-sm-and-down" v-for="(car,i) in cars"
 	      	 :key="i" xs12>
 		<div :class="car.pos+' coolCar'">
 		    <b>{{ car.text }}</b>
 	    	<img :class="car.pos" :src="car.src"></img>
 		</div>
-		<v-flex v-if="i===0" pl-3 style="position: absolute; margin-top: 53vh" offset-xs3 xs1>
+		<div v-if="i===0" style="position: absolute; margin-top: 53vh; width: 100vw;" >
+			<v-flex offset-xs3 xs1>
 			<p style="font-weight: 300; font-size: 21px; position: absolute;     width: 209px; height: 47px;">{{ marks[current] }}</p>
-		</v-flex>
+			</v-flex>
+			<v-flex pr-5 style="display: flex; justify-content: center;" offset-xs5 xs2>
+				<v-btn to="/tarifs" style="width: 226px; height: 48px; " outline color="black"><b style="color: #136CE2 !important;">Тарифы</b></v-btn>
+			</v-flex>
+		</div>
       </v-flex>
-      <v-flex class="carousel-elements" xs12>
+      <v-flex class="carousel-elements hidden-sm-and-down" xs12>
       	<v-flex offset-xs5 xs2 style="display: flex; justify-content: center;">
 			<div @click="completePrev"><svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M14.6731 1.25L1.25 14.6729L14.6731 28.0959" stroke="#707070" stroke-linecap="round" stroke-linejoin="round"/>
@@ -20,6 +25,16 @@
 			</svg></div>
 		</v-flex>
 	</v-flex>
+		<v-carousel light :active-class="'carousel-car'" :cycle="0" style="width: 100vh; margin-top: 30px" :hide-delimiters="true" class="hidden-md-and-up car-carousel">
+			<v-carousel-item
+			  v-for="(car,i) in cars"
+			  :key="i"
+			  :src="car.src"
+			>
+			<p>{{ car.text }}</p>
+			<p>{{ marks[i] }}</p>
+		</v-carousel-item>
+		</v-carousel>
 	</v-layout>
 </template>
 
@@ -32,14 +47,9 @@ import Vuetify, {
       return {
         cars: [
           {
-            src: require('../../static/cars/luxe1.png'),
-            pos: 'first',
-            text: 'VIP',
-          },
-          {
             src: require('../../static/cars/vip1.png'),
-            pos: 'second',
-            text: 'Премиум',
+            pos: 'four',
+            text: 'VIP',
           },
           {
             src: require('../../static/cars/plus1.png'),
@@ -47,12 +57,22 @@ import Vuetify, {
             text: 'Минивен',
           },
           {
+            src: require('../../static/cars/premium1.png'),
+            pos: 'first',
+            text: 'Премиум',
+          },
+          {
             src: require('../../static/cars/business1.png'),
-            pos: 'four',
+            pos: 'second',
             text: 'Бизнес',
-          }
+          },
         ],
-        marks: ['Mercedes-Benz E-class, BMW 5', 'Mercedes-Benz S-class, BMW 7', 'Mercedes-Maybach S-class', 'Mercedes-Benz V-class'],
+        marks: [
+        		'Mercedes-Benz V-class',
+		        'Mercedes-Benz E-class, BMW 5', 
+        		'Mercedes-Benz S-class, BMW 7', 
+        		'Mercedes-Maybach S-class', 
+        		],
         current: 1,
       }
     },
@@ -79,15 +99,11 @@ import Vuetify, {
 		    		TweenLite.to('.four.coolCar', 1, {className: "first coolCar"})
     			);
 		},
-		currentCar: function () {
-			console.log('test');
-		}
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-
 .layout
 	-webkit-justify-content center
 	justify-content center
@@ -186,5 +202,15 @@ img
 	.coolCar.second {
 		width: 47%;
 	}
+}
+</style>
+<style type="text/css">
+	div.hidden-md-and-up.car-carousel[data-v-4af3098a] .v-responsive.v-image.v-carousel__item .v-image__image.v-image__image--cover {
+    background-size: 90% !important;
+}
+	div.hidden-md-and-up.car-carousel[data-v-4af3098a] .v-responsive.v-image.v-carousel__item .v-responsive__content {
+		display: flex !important;
+	    flex-direction: column !important;
+	    align-items: center !important;
 }
 </style>

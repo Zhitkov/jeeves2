@@ -998,9 +998,9 @@ var SEPARATION = 100,
       }
     }
     img.figure {
-      animation: light 6s ease-in-out;
+      animation: light 4s ease-in-out;
     }
     .progress {
-      animation: light 6s ease-in-out;
+      animation: light 4s ease-in-out;
     }
 </style>

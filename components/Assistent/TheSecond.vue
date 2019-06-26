@@ -66,7 +66,7 @@ export default {
 		font-size: 72px;
 		line-height: 64px;
 		color: white;
-	    text-align: center;
+	    text-align: center !important;
 	}
 	img {
 		height: 20%;

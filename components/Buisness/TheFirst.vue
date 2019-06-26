@@ -1,7 +1,7 @@
 <template>
 	<v-img class="parallax-screen" cover :src="bg" :lazy-src="bg" style="min-height: 1000px !important">
 		<v-layout style="color: white; padding-top: 20vh; display: flex; justify-content: center; padding-bottom: 90px;" row wrap>
-			<div class="static">
+			<div class="static hidden-sm-and-down">
 			<v-flex xs12 style="display: flex;flex-direction: row; flex-wrap: wrap;">
 				<v-flex px-4 xs6>
 					<p class="title neue">Корпоративное Обслуживание</p>
@@ -11,6 +11,24 @@
 						<p class="text">Только лучшие водители, прошедшие строгий отбор, неукоснительно соблюдающие стандарты обслуживания и владеющие иностранными языками.</p>
 				</v-flex>
 				<v-flex xs12 md5 pl-5 style="min-width: 520px; ">
+						<p class="title neue">Заявка</p>
+						<Form  :aboutBuisness="true"/>
+				</v-flex>
+				<v-flex  xs12>
+					<AboutVector style="margin-top: 118px; margin-bottom: 200px" :aboutBuisness="true"/>
+				</v-flex>
+			</v-flex>
+			</div>
+			<div class="hidden-md-and-up">
+			<v-flex xs10 offset-xs1 style="display: flex;flex-direction: row; flex-wrap: wrap;">
+				<v-flex xs10>
+					<p class="title neue">Корпоративное Обслуживание</p>
+						<p class="text">JEEVES — надежный партнер!</p>
+						<p class="text">Основным принципом работы компании, является высочайший уровень предоставляемых услуг. Вы можете возложить на нас задачи от сопровождения первых лиц и встреч делегаций в аэропорту, до обслуживания мероприятий и развоза сотрудников компании по домам. </p>
+						<p class="text">К Вашим услугам парк новых премиальных и бизнес-класс автомобилей, никакого брендирования, полный комфорт и безопасность во время поездки.</p>
+						<p class="text">Только лучшие водители, прошедшие строгий отбор, неукоснительно соблюдающие стандарты обслуживания и владеющие иностранными языками.</p>
+				</v-flex>
+				<v-flex xs12 md5  style="min-width: 520px; ">
 						<p class="title neue">Заявка</p>
 						<Form  :aboutBuisness="true"/>
 				</v-flex>

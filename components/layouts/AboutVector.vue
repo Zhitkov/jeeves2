@@ -80,7 +80,8 @@ export default {
 		line-height: 21px;
 		text-align: center;
     	padding-top: 15px;
-    	min-width: 280px;
+    	min-width: 180px;
+    	min-width: 15%;
     }
     .flex.sm10.md2 .title3 {
     	font-size: 14px !important;

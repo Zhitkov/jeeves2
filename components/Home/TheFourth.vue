@@ -2,7 +2,31 @@
 		<v-flex xs12 style="height: 70vh; min-height: 520px;">
 	<v-img cover :src="bg" style="width: 100vw; max-height:70vh; min-height: 700px;">
 			<v-layout style="display: flex; justify-content: center;" row wrap>
-				<div class="static">
+				<div style="width: 100%;" class="hidden-md-and-up">
+				<v-flex px-2 md6 xs12 class="fourth-block">
+					<img style="width: 247.11px; height: 87.11px;" :src="logo">
+					<h1 class="neue">Мобильное приложение</h1>
+					<div class="phone-container">
+						<p style="text-align: center;">Введите номер телефона, чтобы получить ссылку на приложение </p>
+						<div style="display: flex">
+							<PhoneForm/>
+							<v-btn style="width: 226px; height: 48px;" large color="primary text-capitalise">Отправить заявку</v-btn>
+						</div>
+					<appInstallButtons class="fourth-app-install fourth-app-phone"/>
+					</div>
+				</v-flex>
+				<v-flex  xs6 class="fourth-phone">
+					<v-img
+					xs5
+					:src="phone"
+					:lazy-src="phone"
+					position="60% 0%"
+					class="phone"
+					>
+				</v-img>
+			</v-flex>
+			</div>
+				<div class="static hidden-sm-and-down">
 				<v-flex px-2 md6 xs12 class="fourth-block">
 					<img style="width: 247.11px; height: 87.11px;" :src="logo">
 					<h1 class="neue">Мобильное приложение</h1>
@@ -12,15 +36,15 @@
 							<PhoneForm/>
 							<v-btn style="width: 226px; height: 48px;" large color="primary text-capitalise">Отправить заявку</v-btn>
 						</div>
-					</div>
 					<appInstallButtons class="fourth-app-install"/>
+					</div>
 				</v-flex>
 				<v-flex  xs6 class="fourth-phone">
 					<v-img
 					xs5
 					:src="phone"
 					:lazy-src="phone"
-					position="60% 0%"
+					position="60% 10%"
 					class="phone"
 					>
 				</v-img>
@@ -78,8 +102,8 @@ export default {
 	.phone-form {
 		width: 226px;
 	}
-	.fourth-app-install {
-		text-align: left;
+	.fourth-app-install.fourth-app-phone {
+		text-align: center !important;
 	}
 	.v-btn {
 	    margin: 0px 10px;
@@ -128,7 +152,10 @@ export default {
 }
 </style>
 <style type="text/css">
+.fourth-app-install > .downloads {
+	text-align: left !important;
+}
 .phone .v-image__image.v-image__image--cover {
-	background-size: 130%
+	background-size: 93%
 }
 </style>

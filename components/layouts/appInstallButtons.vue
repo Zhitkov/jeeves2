@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="!isBlack" class="downloads text-c">
+		<div v-if="!isBlack" class="downloads">
 			<a href="https://apps.apple.com/ru/app/jeeves-concierge/id1440018985">
 	        	<img style="cursor: pointer; margin-right: 12px;  " src="../../static/buttons/Ios.svg" alt="downloads ios">
 	        </a>
@@ -28,6 +28,7 @@
 <style lang="stylus" scoped>
 .downloads {
     margin-bottom: 103px;
+        text-align: center;
 }
 @media screen and (max-width: 900px){
   .downloads > img{

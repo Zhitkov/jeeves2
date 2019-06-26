@@ -1,14 +1,15 @@
 <template>
   <v-layout class="full-screen" row wrap>
     <v-spacer></v-spacer>
-    <v-flex xs12 style="display: flex; flex-direction: column; justify-content: center;">
+    <v-flex xs12  style="display: flex; flex-direction: column; justify-content: center;">
     <v-parallax class="parallax-screen" dark :lazy-src="bg" :src="bg">
             <div class="static" style="width: 100%; ">
-                <img :src="logo" style="margin-left:25px;  width: 226px; height: 412px;"/>
+                <img class="hidden-sm-and-down" :src="logo" style="margin-left:25px;  width: 226px; height: 412px;"/>
+                <img class="hidden-md-and-up" :src="logo" style="  width: 100%;"/>
             </div>
     </v-parallax>
     <div style="width: 988px !important;" class="static">
-    <v-flex justify-center offset-md1 px-4 md10 offset-xs1 xs10>
+    <v-flex justify-center px-4 offset-md1 md10 offset-xs2 xs8>
       <h1 class="First-text">Комфорт поездок бизнес-классом и личный ассистент в одном мобильном приложении </h1>
       <Border style="margin-left: 0;width: 100%"/>
       <h1 class=" neue First-text">Установить</h1>
@@ -71,7 +72,8 @@ import appInstallButtons from '~/components/layouts/appInstallButtons.vue'
   margin 50px 32px 10px
   font-weight 300
   &:nth-child(3)
-    margin 3.5% 25% 1%
+    margin-top 48px
+    margin-bottom  17px
     font-size 21px !important
 .downloads
   margin-bottom 103px 
@@ -81,7 +83,7 @@ import appInstallButtons from '~/components/layouts/appInstallButtons.vue'
 @media screen and (max-width: 900px) {
   .First-text{
     font-size: 20px; 
-    margin: 5% 10% 1%;
+    /*margin: 5% 10% 1%;*/
   }
   .parallax-screen{
     height: 100vh !important;

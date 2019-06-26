@@ -6,7 +6,7 @@
 	  	<v-flex offset-xs1 xs10>
 	  	  
 	    <v-flex 
-	    px-2 mx-4 xs10 sm10 md9>
+	    px-2 mx-4 xs4 sm10 md9>
 	      <p class=" neue"> Тарифы </p>
 	      <p style="font-size: 18px; font-weight: 100; line-height: 21px; margin-bottom: 0" class="subtitlte">
 	      	Вам будет подан автомобиль выбранного класса, без брендирования, водитель откроет для Вас дверь авто и встретит с зонтом в случае дождя.

@@ -8,7 +8,7 @@
 	     <div class="arrows" @click="prevImg(car.saloon)"><svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M14.6731 1.25L1.25 14.6729L14.6731 28.0959" stroke="#707070" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg></div>
-	     <v-img style="width: 90%; max-height:316px; " cover :src="car.saloon.current.img"></v-img>
+	     <v-img class="car-current" style="width: 80%; max-height:210px;" :aspect-ratio="16/9" cover :src="car.saloon.current.img"></v-img>
 	     <div class="arrows" @click="nextImg(car.saloon)"><svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M1.25 1.25L14.6731 14.6729L1.25 28.0959" stroke="#707070" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg></div>
@@ -167,13 +167,13 @@
 		    			saloon: 
 		    			{
 		    				imgs: [
-			    				require('../../static/cars/testcar.png'),
-			    				require('../../static/cars/test/2.jpeg'),
-			    				require('../../static/cars/test/3.jpeg'),
-			    				require('../../static/cars/test/4.jpeg'),
+			    				require('../../static/cars/business1.png'),
+			    				require('../../static/cars/buissnes/1.jpeg'),
+			    				require('../../static/cars/buissnes/2.jpeg'),
+			    				require('../../static/cars/buissnes/3.jpeg'),
 		    				],
 		    				current: {
-		    					img: require('../../static/cars/testcar.png'),
+		    					img: require('../../static/cars/business1.png'),
 		    					active: 0
 		    				}
 		    			},
@@ -225,15 +225,14 @@
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
-			    						'Водитель бесплатно подождёт вас 10 минут. Каждая следующая минута ожидания оплачивается по тарифу. За частные парковки и проезд по платным дорогам пассажир платит самостоятельно. Также при согласовании со службой поддержки их может оплатить водитель. В таком случае дополнительные расходы будут добавлены к общему счёту за поездку.',
-			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
+			    						'Водитель бесплатно подождёт вас 10 минут. Каждая следующая минута ожидания оплачивается по тарифу. За частные парковки и проезд по платным дорогам пассажир платит самостоятельно. Также при согласовании со службой поддержки их может оплатить водитель. В таком случае дополнительные расходы будут добавлены к общему счёту за поездку.'
 			    					]
 		    					},
 		    				],
 		    				right:
 		    				[
-		    					{
-		    						title:  'Трансферы',
+		    				{
+		    						title:  'Трансферы из города в аэропорт и обратно',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
@@ -268,11 +267,11 @@
 
 		    					},
 		    					{
-		    						title:  'Трансферы из города в аэропорт и обратно',
+		    						title:  '',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
-			    						'Указаны фиксированные стоимости поездок без дополнительных остановок из или в черту города (условные границы обозначены на странице города). При поездке с остановками стоимость рассчитывается по основному тарифу, но не может быть меньше стоимости трансфера без остановок.'
+			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
@@ -285,13 +284,13 @@
 		    			saloon: 
 		    			{
 		    				imgs: [
-			    				require('../../static/cars/testcar.png'),
-			    				require('../../static/cars/test/2.jpeg'),
-			    				require('../../static/cars/test/3.jpeg'),
-			    				require('../../static/cars/test/4.jpeg'),
+			    				require('../../static/cars/vip1.png'),
+			    				require('../../static/cars/vip/1.jpeg'),
+			    				require('../../static/cars/vip/2.jpeg'),
+			    				require('../../static/cars/vip/3.jpeg'),
 		    				],
 		    				current: {
-		    					img: require('../../static/cars/testcar.png'),
+		    					img: require('../../static/cars/vip1.png'),
 		    					active: 0
 		    				}
 		    			},
@@ -349,14 +348,13 @@
 		    						subtitle:
 		    						[
 			    						'Водитель бесплатно подождёт вас 10 минут. Каждая следующая минута ожидания оплачивается по тарифу. За частные парковки и проезд по платным дорогам пассажир платит самостоятельно. Также при согласовании со службой поддержки их может оплатить водитель. В таком случае дополнительные расходы будут добавлены к общему счёту за поездку.',
-			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
 		    				right:
 		    				[
-		    					{
-		    						title:  'Трансферы',
+		    				{
+		    						title:  'Трансферы из города в аэропорт и обратно',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
@@ -391,11 +389,11 @@
 
 		    					},
 		    					{
-		    						title:  'Трансферы из города в аэропорт и обратно',
+		    						title:  '',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
-			    						'Указаны фиксированные стоимости поездок без дополнительных остановок из или в черту города (условные границы обозначены на странице города). При поездке с остановками стоимость рассчитывается по основному тарифу, но не может быть меньше стоимости трансфера без остановок.'
+			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
@@ -408,13 +406,13 @@
 		    			saloon: 
 		    			{
 		    				imgs: [
-			    				require('../../static/cars/testcar.png'),
-			    				require('../../static/cars/test/2.jpeg'),
-			    				require('../../static/cars/test/3.jpeg'),
-			    				require('../../static/cars/test/4.jpeg'),
+			    				require('../../static/cars/premium1.png'),
+			    				require('../../static/cars/premium/1.jpeg'),
+			    				require('../../static/cars/premium/2.jpeg'),
+			    				// require('../../static/cars/test/4.jpeg'),
 		    				],
 		    				current: {
-		    					img: require('../../static/cars/testcar.png'),
+		    					img: require('../../static/cars/premium1.png'),
 		    					active: 0
 		    				}
 		    			},
@@ -472,14 +470,13 @@
 		    						subtitle:
 		    						[
 			    						'Водитель бесплатно подождёт вас 10 минут. Каждая следующая минута ожидания оплачивается по тарифу. За частные парковки и проезд по платным дорогам пассажир платит самостоятельно. Также при согласовании со службой поддержки их может оплатить водитель. В таком случае дополнительные расходы будут добавлены к общему счёту за поездку.',
-			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
 		    				right:
 		    				[
-		    					{
-		    						title:  'Трансферы',
+		    				{
+		    						title:  'Трансферы из города в аэропорт и обратно',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
@@ -514,11 +511,11 @@
 
 		    					},
 		    					{
-		    						title:  'Трансферы из города в аэропорт и обратно',
+		    						title:  '',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
-			    						'Указаны фиксированные стоимости поездок без дополнительных остановок из или в черту города (условные границы обозначены на странице города). При поездке с остановками стоимость рассчитывается по основному тарифу, но не может быть меньше стоимости трансфера без остановок.'
+			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
@@ -531,13 +528,13 @@
 		    			saloon: 
 		    			{
 		    				imgs: [
-			    				require('../../static/cars/testcar.png'),
-			    				require('../../static/cars/test/2.jpeg'),
-			    				require('../../static/cars/test/3.jpeg'),
-			    				require('../../static/cars/test/4.jpeg'),
+			    				require('../../static/cars/plus1.png'),
+			    				require('../../static/cars/miniven/2.jpeg'),
+			    				require('../../static/cars/miniven/1.jpeg'),
+			    				// require('../../static/cars/test/4.jpeg'),
 		    				],
 		    				current: {
-		    					img: require('../../static/cars/testcar.png'),
+		    					img: require('../../static/cars/plus1.png'),
 		    					active: 0
 		    				}
 		    			},
@@ -595,14 +592,13 @@
 		    						subtitle:
 		    						[
 			    						'Водитель бесплатно подождёт вас 10 минут. Каждая следующая минута ожидания оплачивается по тарифу. За частные парковки и проезд по платным дорогам пассажир платит самостоятельно. Также при согласовании со службой поддержки их может оплатить водитель. В таком случае дополнительные расходы будут добавлены к общему счёту за поездку.',
-			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
 		    				right:
 		    				[
 		    					{
-		    						title:  'Трансферы',
+		    						title:  'Трансферы из города в аэропорт и обратно',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
@@ -637,11 +633,11 @@
 
 		    					},
 		    					{
-		    						title:  'Трансферы из города в аэропорт и обратно',
+		    						title:  '',
 		    						subtitleCost: '',
 		    						subtitle:
 		    						[
-			    						'Указаны фиксированные стоимости поездок без дополнительных остановок из или в черту города (условные границы обозначены на странице города). При поездке с остановками стоимость рассчитывается по основному тарифу, но не может быть меньше стоимости трансфера без остановок.'
+			    						'Если при поездке в аэропорт вы укажете в комментарии к заказу номер рейса, мы встретим вас с табличкой в зоне прилёта. В таком случае стоимость платной парковки добавится к цене поездки.'
 			    					]
 		    					},
 		    				],
@@ -656,12 +652,12 @@
     		saloon.current.active = active;
     	},
     	nextImg: function (saloon) {
-    		saloon.current.img = saloon.current.active!==3?saloon.imgs[saloon.current.active + 1]:saloon.imgs[0];
-    		saloon.current.active = saloon.current.active!==3?saloon.current.active + 1:0;
+    		saloon.current.img = saloon.current.active!==saloon.imgs.length-1?saloon.imgs[saloon.current.active + 1]:saloon.imgs[0];
+    		saloon.current.active = saloon.current.active!==saloon.imgs.length-1?saloon.current.active + 1:0;
     	},
     	prevImg: function (saloon) {
-    		saloon.current.img = saloon.current.active!==0?saloon.imgs[saloon.current.active - 1]:saloon.imgs[3];
-    		saloon.current.active = saloon.current.active!==0?saloon.current.active - 1:3;
+    		saloon.current.img = saloon.current.active!==0?saloon.imgs[saloon.current.active - 1]:saloon.imgs[saloon.imgs.length-1];
+    		saloon.current.active = saloon.current.active!==0?saloon.current.active - 1:saloon.imgs.length-1;
     	},
     }
   }
@@ -692,12 +688,16 @@ div[data-v-56608fae] .v-responsive.v-image.v-carousel__item .v-image__image--con
 .v-window-item[data-v-56608fae] .v-responsive.v-image.v-carousel__item .v-responsive__sizer {
 	padding-bottom: 60.3333% !important;
 }
+.v-responsive.v-image.car-current .v-image__image.v-image__image--cover {
+	background-size: 90% !important;
+}
 </style>
 <style scoped>
 .arrows {
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin: 5px;
 }
 .car-block {
 	display: flex; 

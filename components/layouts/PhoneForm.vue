@@ -72,7 +72,7 @@
   .phone-form2 .v-input__slot {
       border-radius: 10px 0 0 10px !important;
       background: #fff !important;
-      border: 0.1px solid #1D1919 !important;
+      border: 0.6px solid #1D1919 !important;
   }
   .phone-form2 .tel-mask .v-input__slot {
       border-radius: 0 10px 10px 0 !important;
@@ -82,7 +82,7 @@
 
 <style lang="stylus">
 .v-text-field.v-text-field--solo .v-label {
-  color: gray !important;
+  color: white !important;
 }
 .v-text-field.v-text-field--solo .v-label.theme--light {
   color: black !important;

@@ -14,7 +14,7 @@
 		<v-flex pl-2 xs3>
 
 			<v-card-title class="size">
-				<v-img :src="logo" contain></v-img>
+				<v-img  :src="logo" contain></v-img>
 				<strong class="subheading">
 					<ul>
 						<nuxt-link tag="li" to="/drivers">Водителям</nuxt-link>
@@ -55,7 +55,7 @@
 </v-flex>
 <v-flex xs12>
 	<v-card-actions dark class="footer-action dark justify-start">
-		<p style="font-size: 18px; font-weight: 500;">&copy; 2017 «Jeeves». Все права защищены</p>
+		<p style="font-size: 18px; font-weight: 300;">&copy; 2017 «Jeeves». Все права защищены</p>
 		<div>
 			<p style="font-size: 14px;">Условия использования</p>
 			<p style="font-size: 14px;">Политика конфиденциальности</p>
